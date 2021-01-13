@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://tomap.co/ZP_reset.css" />
+  <title>Portfoliosite</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="icomoon.css">
+</head>
+<body onload="draw()" class="hidden">
+
+  <div class="overall">
+
+    <!-- 窓枠 -->
+    <canvas id="window" width="1440" height="750"></canvas>
+    <!-- 背景  -->
+    <div class="bg"></div>
+    <!-- 赤い道  -->
+    <div class="load none" id="load"></div>
+    <!-- 車のボディ -->
+    <div class="car-body">
+      <div class="car-head">
+        <nav>
+          <ul class="top-nav">       
+            <li><a href="#section-1">プロフィール</a></li>
+            <li><a href="#section-2">スキル</a></li>
+            <li><a href="#section-3">実績</a></li>
+            <li><a href="#section-4">作品</a></li>
+            <li><a href="#section-5">コンタクト</a></li>
+            <li><span id="page-top"></span><li>
+          </ul>
+        </nav>
+      </div>
+      <div class="meter">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="hundle"></div>
+      <div class="whyper-base"></div>
+    </div>
+    <!-- ファーストビュー -->
+    <section class="first-view">
+        <h1 class="portfolio">My Portfolio Site</h1>    
+        <button class="start-btn  btn-flat"><span>START</span></button> 
+    </section>
+    <!-- スクロール画面 -->
+    <div class="base none ja-lg" data-z="5">
+      <div id="scaler" class="scaler">
+        <!-- プロフィール -->
+        <section class="section section-1" data-z="10" id="section-1">
+        
+          <h2 class="section-ttl">Profile</h2>
+          <article class="profile-container article" >
+            <div class="sec-container">
+              <div class="art-ttl">プロフィール</div>
+              <div class="art-body">
+                <table>
+                  <tr>
+                    <th></th>
+                    <td class="my-name">池内隆人</td>
+                  </tr>
+                  <tr>
+                    <th>出身</th>
+                    <td>岡山県（現在広島県）</td>
+                  </tr>
+                  <tr>
+                    <th>年齢</th>
+                    <td>２１歳</td>
+                  </tr>
+                  <tr>
+                    <th>高校</th>
+                    <td>東岡山工業高校</td>
+                  </tr>
+                  <tr>
+                    <th>現在の仕事</th>
+                    <td>自動車工場勤務</td>
+                  </tr>
+                  <tr>
+                    <th>趣味</th>
+                    <td>古着、ドライブ、酒、野球観戦</td>
+                  </tr>
+                  <tr>
+                    <th>将来の目標</th>
+                    <td>オープンカーを買う</td>
+                  </tr>
+                </table>
+                <div class="top-pic">
+                  <img src="img/thumbnail.png" alt="サムネイル">
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- スキル -->
+        <section class="section section-2" data-z="20" id="section-2">
+
+            <h2 class="section-ttl">SKILL</h2>
+            <article class="skill-container article">
+              <div class="sec-container">
+                <div class="art-ttl">スキル</div>
+                <ul  class="art-body2 grid">
+                    <li class="html">
+                      <span class="fa-html5"></span>
+                      <h4>HTML</h4>
+                    </li>
+                    <li class="js">
+                      <span class="fa-js-square"></span>
+                      <h4>javascript</h4>
+                    </li>
+                    <li class="vue.js">
+                      <span class="fa-vuejs"></span>
+                      <h4>vue.js</h4>
+                    </li>
+                    <li class="css">
+                      <span class="fa-css3-alt"></span>
+                      <h4>CSS</h4>
+                    </li>
+                    <li class="design">
+                      <span class="fa-pen-square"></span>
+                      <h4>design</h4>
+                    </li>
+                    <li class="wordpress">
+                      <span class="fa-wordpress"></span></i>
+                      <h4>wordpress</h4>
+                    </li>
+                  </ul>
+              </div>
+            </article>
+        </section>
+        <!-- 実績 -->
+        <section class="section section-3" data-z="30" id="section-3">
+
+          <h2 class="section-ttl"> WORKS</h2>
+          <article class="works-container article">
+            <div class="sec-container">
+              <div class="art-ttl">獲得案件</div>
+              <ul class="works-note">
+                <li>６月： サイト修正依頼</li>
+                <li>６月： LP制作</li>
+                <li>８月： HP制作</li>
+              </ul>
+              <ul class="art-body">
+                <li class="works-wrapper">comming soon</li>
+                <li class="works-wrapper">comming soon</li>
+                <li class="works-wrapper">comming soon</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <!-- 作品 -->
+        <section class="section section-4" data-z="40" id="section-4">
+
+          <h2 class="section-ttl">PEACE</h2>
+          <article class="peace-container article">
+            <div class="sec-container">
+              <div class="art-ttl">作品</div>
+              <ul class="art-body2 grid">
+                  <li class="peace-con">
+                    <a href="https://ryutoikeuchi.github.io/vuejs.todoapp/." target="_blank">
+                      <div class="red-box">
+                        <img class="peace-img" src="img/todoapp.png" alt="">
+                        <p class="peace-ttl">todoアプリ</p>
+                        <p class="peace-txt">Vue.jsで制作しました。絞り込み機能など、まだまだ改善の余地があります。</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>
+                  <li class="peace-con">
+                    <a href="https://ryutoikeuchi.github.io/isara-/" target="_blank">
+                      <div class="red-box">
+                        <img class="peace-img" src="img/isara模写.png" alt="">
+                        <p class="peace-ttl">isara模写</p>
+                        <p class="peace-txt">6月に制作しました。初めての模写ということもあり、かなり時間が掛かりました。</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>
+                  <li class="peace-con">
+                    <a href="#" target="_blank">
+                      <div class="red-box">
+                        <p class="peace-ttl">comming</p>
+                        <p class="peace-txt">soon</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>
+                  <li class="peace-con">
+                    <a href="#" target="_blank">
+                      <div class="red-box">
+                        <p class="peace-ttl">comming</p>
+                        <p class="peace-txt">soon</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>
+                  <li class="peace-con">
+                    <a href="#" target="_blank">
+                      <div class="red-box">
+                        <p class="peace-ttl">comming</p>
+                        <p class="peace-txt">soon</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>
+                  <li class="peace-con">
+                    <a href="#" target="_blank">
+                      <div class="red-box">
+                        <p class="peace-ttl">comming</p>
+                        <p class="peace-txt">soon</p>
+                      </div>
+                    </a>
+                    <div class="shadow-box"></div>
+                  </li>                
+                </ul>
+            </div>
+          </article>
+        </section>
+        <!-- コンタクト -->
+        <section class="section section-5" data-z="50" id="section-5">
+          <h2 class="section-ttl">CONTACT</h2>
+          <article class="contact-container article">
+            <div class="sec-container">
+              <div class="art-ttl">コンタクト</div>
+              <div class="contact-content">
+                <p>依頼、お問い合わせがございましたら<br>
+                  メールよりご用件をご記入の上、送信ください</p>
+                <p>その他、SNSからのDMもお待ちしております！</p>
+                <p>24時間以内に返信いたします</p>
+                <ul>
+                  <li><a href="https://twitter.com/1Kj2D8I0M4pLJSE" target="_blank"><span class="fa-twitter-square"></span></a></li>
+                  <li><a href="mailto:ryu.i7133@icloud.com" target="_blank"><span class="fa-envelope"></span></a></li>
+                  <li><a href="https://www.instagram.com/ryuto_ma2d/" target="_blank"><span class="fa-instagram-square"></span></a></li>
+                </ul>
+                <p class="foot">©︎2020.10 RYUTO IKEUCHI</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <div id="scroll" class="scroll"></div>
+
+  </div>
+  <div class="mobile-page">
+    <h4>NOT found</h4>
+    <p>申し訳ございません
+      <br>こちらのサイトはモバイル対応しておりません
+      <br>お手数ですが画面幅<b>980px</b>以上のPCより閲覧ください
+    </p>
+  </div>
+
+  <noscript>
+    <p>JavaScriptがサポートされていないため表示が不完全です <p>
+  </noscript>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
