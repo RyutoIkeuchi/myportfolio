@@ -505,7 +505,7 @@ td {
 .works-note {
   list-style: 2px;
   margin: 50px auto;
-  width: 200px;
+  width: 800px;
 
    & li {
     margin-bottom: 20px;
@@ -515,10 +515,25 @@ td {
 .works-wrapper {
   width: 280px;
   height: 210px;
-  background-color: gray;
+  background-color:rgba(0, 0, 0, .5);
   color: white;
   text-align: center;
   line-height: 210px;
+  position: relative;
+
+  & a {
+    width: 100%;
+    display: inline-block;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 210px;
+      z-index: -1;
+    }
+  }
 }
 
 .works-container .art-ttl::after {
