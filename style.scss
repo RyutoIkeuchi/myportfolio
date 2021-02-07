@@ -13,7 +13,7 @@ $cRed:#C43327;
 
 #window {
   position: fixed;
-  top: 0;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -509,6 +509,11 @@ td {
 
    & li {
     margin-bottom: 20px;
+
+    & span {
+      color: $cBlack;
+      margin-left: 20px;
+    }
   }
 }
 
